@@ -77,9 +77,9 @@ function sonIguales(x, y) {
   // Tu código:
 
   if(x===y){
-    resutado = true;
+    return true;
   }else{
-    resultado = false;
+    return false;
   }
 
 }
