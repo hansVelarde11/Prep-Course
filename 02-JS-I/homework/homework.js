@@ -47,17 +47,27 @@ function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
   
+  resultado = x-y;
+  
+  return resultado;
 }
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
   
+  resultado = x*y;
+
+  return resultado;
 }
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
+
+  resultado =x/y;
+
+  return resultado;
   
 }
 
@@ -65,6 +75,16 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
+
+  if(x==y){
+    resutado = "true";
+  }else{
+    resultado = "false";
+  }
+    
+  return resultado;
+
+  
   
 }
 
@@ -73,6 +93,15 @@ function tienenMismaLongitud(str1, str2) {
   // De lo contrario, devuelve "false"
   // Tu código:
   
+  largostr1= length(str1);
+  largostr2= length(str2);
+
+  if(largostr1==largostr2){
+    resultado ="true";
+  }else
+    resultado ="false";
+
+  return resultado;
 }
 
 function menosQueNoventa(num) {
