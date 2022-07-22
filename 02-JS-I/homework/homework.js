@@ -16,7 +16,7 @@ const nuevaResta = 10 - 5 === 5;
 const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 4.2;
+const nuevoModulo = 21 % 5 === 1;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -77,15 +77,11 @@ function sonIguales(x, y) {
   // Tu código:
 
   if(x==y){
-    resutado = "true";
+    resutado = true;
   }else{
-    resultado = "false";
+    resultado = false;
   }
-    
-  return resultado;
 
-  
-  
 }
 
 function tienenMismaLongitud(str1, str2) {
@@ -93,7 +89,7 @@ function tienenMismaLongitud(str1, str2) {
   // De lo contrario, devuelve "false"
   // Tu código:
 
-  return str1.length() === str2.length();
+  return str1.length === str2.length;
 }
 
 function menosQueNoventa(num) {
@@ -287,11 +283,11 @@ function esVocal(letra){
   //Escribe tu código aquí
   
   if(letra.length()>1){
-    return "Dato Incorrecto";
+    return "Dato incorrecto";
   }if(letra === "a" || letra ==="e" || letra==="i" || letra==="o" || letra==="u"){
     return "Es vocal";
   }else{
-    return "Dato Incorrecto";
+    return "Dato incorrecto";
   }
 }
 
