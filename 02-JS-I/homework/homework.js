@@ -76,7 +76,7 @@ function sonIguales(x, y) {
   // De lo contrario, devuelve "false"
   // Tu código:
 
-  if(x==y){
+  if(x===y){
     resutado = true;
   }else{
     resultado = false;
@@ -282,7 +282,7 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   
-  if(letra.length()>1){
+  if(letra.length>1){
     return "Dato incorrecto";
   }if(letra === "a" || letra ==="e" || letra==="i" || letra==="o" || letra==="u"){
     return "Es vocal";
