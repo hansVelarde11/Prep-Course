@@ -11,7 +11,7 @@ function obtenerMayor(x, y) {
   if(x<y){
     return y;
   }else{
-    return y;
+    return x;
   }
 }
 
@@ -34,9 +34,9 @@ function conection(status) {
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
 
-  if(status=1){
+  if(status===1){
     return "Online";
-  }if(status=2){
+  }if(status===2){
     return "Away";
   }else{
     return "Offline";
@@ -72,16 +72,16 @@ function colors(color) {
   //Usar el statement Switch.
 
   switch (color) {
-    case blue:
+    case "blue":
       return "This is blue";
   
-    case red:
+    case "red":
       return "This is red";
     
-    case green:
+    case "green":
       return "This is green";
 
-    case orange:
+    case "orange":
       return "This is orange";
 
     default:
@@ -138,13 +138,14 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
 
-  if(numero%3===0){
-    return "fizz";
+  if(numero%3===0 && numero%5===0){
+    return "fizzbuzz";
   }else if(numero%5===0){
     return "buzz";
-  }else if(numero%15===0){
-    return "fizzbuzz";
+  }else if(numero%3===0){
+    return "fizz";
   }
+  return numero;
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -154,11 +155,10 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-
-  if(num1>num2 && num1>num3 && Math.sign(num1)===1) return "Número 1 es mayor y positivo";
+  if(Math.sign(num1)===0 || Math.sign(num2)===0 || Math.sign(num3)===0) return "Error";
   if(Math.sign(num1)===-1 || Math.sign(num2)===-1 || Math.sign(num3)===-1) return "Hay negativos";
+  if(num1>num2 && num1>num3 && Math.sign(num1)===1) return "Número 1 es mayor y positivo";
   if(num3>num1 && num3>num2) return num3+1;
-  if(Math.sign(num1)===0 || Math.sign(num1)===0 || Math.sign(num1)===0) return "Error";
   else return false;
 }
 
@@ -201,7 +201,7 @@ function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
 
-  if(numero.length===3) return true;
+  if(numero>99 && numero<1000) return true;
   else return false;
 }
 
